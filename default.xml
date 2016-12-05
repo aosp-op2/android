@@ -2,9 +2,17 @@
 <manifest>
 
   <remote  name="aosp"
-           fetch=".." />
+           fetch="https://android.googlesource.com"
+           review="android-review.googlesource.com"
+           revision="refs/tags/android-7.0.1_r7" />
+
+  <remote name="github"
+           fetch="https://github.com" />
+
   <default revision="refs/tags/android-7.1.0_r7"
            remote="aosp"
+           sync-c="true"
+           sync-f="true"
            sync-j="4" />
 
   <project path="build" name="platform/build" groups="pdk,tradefed" >
